@@ -12,3 +12,4 @@ class Genre(db.Model):
 class GenreSchema(Schema):
     id = fields.Int()
     name = fields.Str()
+
