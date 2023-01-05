@@ -38,7 +38,7 @@ def create_data(app, db):
         u3 = User(username="oleg", password="P@ssw0rd", role="admin")
 
         with db.session.begin():
-            db.session.add_all(u1, u2, u3)
+            db.session.add_all([u1, u2, u3])
 
 
 app = create_app(Config())
