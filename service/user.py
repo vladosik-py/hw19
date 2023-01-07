@@ -41,7 +41,7 @@ class UserService:
 
         return base64.b64encode(hashed_password)
 
-    def compare_password(self, password_hash, other_password) -> bool:
+    def compare_passwords(self, password_hash, other_password) -> bool:
         return hmac.compare_digest(
             password_hash,
             self.password_hash(other_password)
